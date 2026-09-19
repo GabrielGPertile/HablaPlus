@@ -1,12 +1,7 @@
-import './App.css'
+import HomePage from "./pages/HomePage"
 
 function App() {
-  return (
-    <main>
-      <h1>Habla Plus</h1>
-      <p>Plataforma de cursos de espanhol</p>
-    </main>
-  )
+  return <HomePage />
 }
 
 export default App
