@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react"
+import { getHello } from "../services/api"
+
 function HomePage() {
+    const [message, setMessage] = useState("Carregando...")
+
+    useEffect(() => {
+        getHello()
+            .then((data) => {
+                setMessage(data.message)
+            })
+            .catch(() => {
+                setMessage("Erro ao conectar com o backend")
+            })
+    }, [])
+
     return (
         <main>
             <section>
@@ -12,6 +27,8 @@ function HomePage() {
                 <button type="button">
                     Conheça nossos cursos
                 </button>
+
+                <p>{message}</p>
             </section>
         </main>
     )
