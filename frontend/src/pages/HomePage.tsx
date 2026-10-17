@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { getHello } from "../services/api"
 
+import { ThemeProvider, createTheme} from "@mui/material/styles"
+
 function HomePage() {
     const [message, setMessage] = useState("Carregando...")
 
@@ -15,22 +17,7 @@ function HomePage() {
     }, [])
 
     return (
-        <main>
-            <section>
-                <h1>Aprenda espanhol com o HablaPlus</h1>
-
-                <p>
-                    Encontre cursos de espanhol e aprenda no seu ritmo,
-                    com professores e conteúdos preparados para você.
-                </p>
-
-                <button type="button">
-                    Conheça nossos cursos
-                </button>
-
-                <p>{message}</p>
-            </section>
-        </main>
+       
     )
 }
 
