@@ -536,6 +536,195 @@ function HomePage() {
                                 </Box>
                             ))}
                         </Box>
+
+                        {/* Seção Quem Somos */}
+                        <Box
+                            component="section"
+                            id="quem-somos"
+                            sx={{
+                                mt: 10,
+                                mb: 6,
+                                display: "grid",
+                                gridTemplateColumns: {
+                                    xs: "1fr",
+                                    md: "1fr 1fr",
+                                },
+                                alignItems: "center",
+                                gap: { xs: 4, md: 7 },
+                                backgroundColor: "#F5EEDB",
+                                borderRadius: 4,
+                                p: { xs: 3, md: 5 },
+                            }}
+                        >
+                            {/* Texto de apresentação */}
+                            <Box>
+                                <Typography
+                                    sx={{
+                                        color: "#CB070C",
+                                        fontWeight: 700,
+                                        fontSize: "0.9rem",
+                                        letterSpacing: 2,
+                                        mb: 2,
+                                    }}
+                                >
+                                    QUEM SOMOS
+                                </Typography>
+
+                                <Typography
+                                    component="h2"
+                                    variant="h3"
+                                    sx={{
+                                        color: "#0D0D0B",
+                                        fontWeight: 700,
+                                        mb: 3,
+                                        fontSize: {
+                                            xs: "1.8rem",
+                                            md: "2.4rem",
+                                        },
+                                    }}
+                                >
+                                    Muito mais que aprender um novo idioma!
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: "#555",
+                                        lineHeight: 1.9,
+                                        textAlign: "justify",
+                                        mb: 2,
+                                    }}
+                                >
+                                    O Espanhol Genial é um projeto dedicado ao ensino
+                                    da língua espanhola, criado para tornar o aprendizado
+                                    mais simples, acessível e interessante.
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: "#555",
+                                        lineHeight: 1.9,
+                                        textAlign: "justify",
+                                        mb: 2,
+                                    }}
+                                >
+                                    Acreditamos que aprender um novo idioma vai muito
+                                    além de conhecer palavras e regras gramaticais.
+                                    É também descobrir culturas, explorar novos lugares,
+                                    conhecer pessoas e abrir portas para novas oportunidades.
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: "#555",
+                                        lineHeight: 1.9,
+                                        textAlign: "justify",
+                                    }}
+                                >
+                                    Por isso, buscamos oferecer conteúdos que aproximem
+                                    o espanhol do cotidiano, com temas práticos,
+                                    explicações claras e uma experiência de aprendizado
+                                    que respeita o ritmo de cada pessoa.
+                                </Typography>
+                            </Box>
+
+                            {/* Imagem ilustrativa */}
+                            <Box
+                                component="img"
+                                src="/homeImagem3.png"
+                                alt="Aprendizado da língua espanhola"
+                                sx={{
+                                    width: "100%",
+                                    height: {
+                                        xs: 250,
+                                        md: 420,
+                                    },
+                                    objectFit: "cover",
+                                    borderRadius: 3,
+                                }}
+                            />
+                        </Box>
+
+                        {/* Missão e propósito */}
+                        <Box
+                            component="section"
+                            sx={{
+                                mt: 6,
+                                mb: 4,
+                                display: "grid",
+                                gridTemplateColumns: {
+                                    xs: "1fr",
+                                    sm: "repeat(2, 1fr)",
+                                },
+                                gap: 3,
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    p: 4,
+                                    border: "1px solid #E5DCC9",
+                                    borderRadius: 3,
+                                    textAlign: "center",
+                                }}
+                            >
+                                <Typography
+                                    component="h3"
+                                    variant="h5"
+                                    sx={{
+                                        color: "#CB070C",
+                                        fontWeight: 700,
+                                        mb: 2,
+                                    }}
+                                >
+                                    Nossa missão
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: "#555",
+                                        lineHeight: 1.8,
+                                        textAlign: "justify",
+                                    }}
+                                >
+                                    Tornar o aprendizado do espanhol uma experiência
+                                    acessível, dinâmica e enriquecedora, incentivando
+                                    cada estudante a desenvolver suas habilidades e
+                                    conquistar novas possibilidades por meio do idioma.
+                                </Typography>
+                            </Box>
+
+                            <Box
+                                sx={{
+                                    p: 4,
+                                    border: "1px solid #E5DCC9",
+                                    borderRadius: 3,
+                                    textAlign: "center",
+                                }}
+                            >
+                                <Typography
+                                    component="h3"
+                                    variant="h5"
+                                    sx={{
+                                        color: "#CB070C",
+                                        fontWeight: 700,
+                                        mb: 2,
+                                    }}
+                                >
+                                    Nosso propósito
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: "#555",
+                                        lineHeight: 1.8,
+                                        textAlign: "justify",
+                                    }}
+                                >
+                                    Inspirar pessoas a descobrirem o mundo da língua
+                                    espanhola, construindo conhecimento, confiança e
+                                    autonomia a cada nova etapa do aprendizado.
+                                </Typography>
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
             </Box>
