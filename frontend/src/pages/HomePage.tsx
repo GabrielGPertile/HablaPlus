@@ -877,6 +877,171 @@ function HomePage() {
                                 ))}
                             </Box>
                         </Box>
+
+
+                        {/* Seção de Contato */}
+                        <Box
+                            component="section"
+                            id="contato"
+                            sx={{
+                                mt: 8,
+                                mb: 8,
+                                backgroundColor: "#F5EEDB",
+                                borderRadius: 4,
+                                p: { xs: 3, md: 6 },
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    color: "#CB070C",
+                                    fontWeight: 700,
+                                    fontSize: "0.9rem",
+                                    letterSpacing: 2,
+                                    textAlign: "center",
+                                    mb: 2,
+                                }}
+                            >
+                                CONTATO
+                            </Typography>
+
+                            <Typography
+                                component="h2"
+                                variant="h3"
+                                sx={{
+                                    textAlign: "center",
+                                    color: "#0D0D0B",
+                                    fontWeight: 700,
+                                    fontSize: {
+                                        xs: "1.8rem",
+                                        md: "2.4rem",
+                                    },
+                                    mb: 2,
+                                }}
+                            >
+                                Vamos conversar?
+                            </Typography>
+
+                            <Typography
+                                sx={{
+                                    textAlign: "center",
+                                    color: "#555",
+                                    lineHeight: 1.8,
+                                    maxWidth: 650,
+                                    mx: "auto",
+                                    mb: 5,
+                                }}
+                            >
+                                Tem alguma dúvida ou deseja saber mais sobre o Espanhol Genial?
+                                Em breve, teremos um canal de contato para atender você!
+                            </Typography>
+
+                            <Box
+                                sx={{
+                                    maxWidth: 600,
+                                    mx: "auto",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: 2.5,
+                                }}
+                            >
+                                <Box>
+                                    <Typography sx={{ fontWeight: 600, mb: 1 }}>
+                                        Nome
+                                    </Typography>
+
+                                    <Box
+                                        component="input"
+                                        placeholder="Digite seu nome"
+                                        disabled
+                                        sx={{
+                                            width: "100%",
+                                            boxSizing: "border-box",
+                                            p: 2,
+                                            border: "1px solid #E5DCC9",
+                                            borderRadius: 2,
+                                            backgroundColor: "#FAFAED",
+                                            fontSize: "1rem",
+                                        }}
+                                    />
+                                </Box>
+
+                                <Box>
+                                    <Typography sx={{ fontWeight: 600, mb: 1 }}>
+                                        E-mail
+                                    </Typography>
+
+                                    <Box
+                                        component="input"
+                                        placeholder="Digite seu e-mail"
+                                        disabled
+                                        sx={{
+                                            width: "100%",
+                                            boxSizing: "border-box",
+                                            p: 2,
+                                            border: "1px solid #E5DCC9",
+                                            borderRadius: 2,
+                                            backgroundColor: "#FAFAED",
+                                            fontSize: "1rem",
+                                        }}
+                                    />
+                                </Box>
+
+                                <Box>
+                                    <Typography sx={{ fontWeight: 600, mb: 1 }}>
+                                        Mensagem
+                                    </Typography>
+
+                                    <Box
+                                        component="textarea"
+                                        placeholder="Escreva sua mensagem..."
+                                        disabled
+                                        rows={5}
+                                        sx={{
+                                            width: "100%",
+                                            boxSizing: "border-box",
+                                            p: 2,
+                                            border: "1px solid #E5DCC9",
+                                            borderRadius: 2,
+                                            backgroundColor: "#FAFAED",
+                                            fontSize: "1rem",
+                                            resize: "vertical",
+                                            fontFamily: "inherit",
+                                        }}
+                                    />
+                                </Box>
+
+                                <Button
+                                    variant="contained"
+                                    disabled
+                                    sx={{
+                                        backgroundColor: "#CB070C",
+                                        color: "#FFFFFF",
+                                        fontWeight: 700,
+                                        py: 1.5,
+                                        borderRadius: 2,
+                                        textTransform: "none",
+                                        "&.Mui-disabled": {
+                                            backgroundColor: "#CB070C",
+                                            color: "#FFFFFF",
+                                            opacity: 0.6,
+                                        },
+                                    }}
+                                >
+                                    Envio em breve
+                                </Button>
+
+                                <Typography
+                                    sx={{
+                                        textAlign: "center",
+                                        color: "#777",
+                                        fontSize: "0.8rem",
+                                    }}
+                                >
+                                    Nosso canal de atendimento estará disponível em breve.
+                                </Typography>
+                            </Box>
+                        </Box>
+
                     </Box>
                 </Box>
             </Box>
