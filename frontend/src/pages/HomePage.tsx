@@ -1,8 +1,11 @@
 import { Box, Typography, Button } from "@mui/material";
 
+import { Accordion, AccordionSummary, AccordionDetails, } from "@mui/material";
+
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
 import Header from "../components/Header"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function HomePage() {
     const courses = [
@@ -32,6 +35,34 @@ function HomePage() {
             certificate: true,
             description:
                 "Aprimore sua comunicação, amplie seu vocabulário e desenvolva sua conversação.",
+        },
+    ];
+
+    const faqs = [
+        {
+            question: "O que é o Espanhol Genial?",
+            answer:
+                "O Espanhol Genial é um projeto dedicado ao ensino da língua espanhola, com conteúdos voltados para tornar o aprendizado mais simples, prático e interessante.",
+        },
+        {
+            question: "Preciso saber espanhol para começar?",
+            answer:
+                "Não! Temos o curso de Espanhol Básico, indicado para quem deseja aprender os fundamentos do idioma e dar os primeiros passos.",
+        },
+        {
+            question: "Quais cursos estão disponíveis?",
+            answer:
+                "Atualmente, apresentamos opções de Espanhol Básico, Espanhol para Viagens e Espanhol Avançado. Cada curso é direcionado a diferentes níveis de conhecimento.",
+        },
+        {
+            question: "Os cursos oferecem certificado?",
+            answer:
+                "Os cursos apresentados na plataforma possuem indicação de certificado. As informações sobre emissão e conclusão serão apresentadas nos detalhes de cada curso.",
+        },
+        {
+            question: "Como faço para escolher meu curso?",
+            answer:
+                "Você pode conhecer as opções disponíveis na seção de cursos e escolher aquela que melhor corresponde ao seu nível de conhecimento e aos seus objetivos.",
         },
     ];
 
@@ -723,6 +754,127 @@ function HomePage() {
                                     espanhola, construindo conhecimento, confiança e
                                     autonomia a cada nova etapa do aprendizado.
                                 </Typography>
+                            </Box>
+                        </Box>
+
+
+                        {/* Seção Perguntas Frequentes */}
+                        <Box
+                            component="section"
+                            id="faq"
+                            sx={{
+                                mt: 10,
+                                mb: 8,
+                                maxWidth: 950,
+                                mx: "auto",
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    color: "#CB070C",
+                                    fontWeight: 700,
+                                    fontSize: "0.9rem",
+                                    letterSpacing: 2,
+                                    textAlign: "center",
+                                    mb: 2,
+                                }}
+                            >
+                                FAQ
+                            </Typography>
+
+                            <Typography
+                                component="h2"
+                                variant="h3"
+                                sx={{
+                                    textAlign: "center",
+                                    color: "#0D0D0B",
+                                    fontWeight: 700,
+                                    fontSize: {
+                                        xs: "1.8rem",
+                                        md: "2.4rem",
+                                    },
+                                    mb: 2,
+                                }}
+                            >
+                                Perguntas frequentes
+                            </Typography>
+
+                            <Typography
+                                sx={{
+                                    textAlign: "center",
+                                    color: "#555",
+                                    lineHeight: 1.8,
+                                    mb: 5,
+                                }}
+                            >
+                                Tire suas dúvidas e descubra mais sobre o Espanhol Genial!
+                            </Typography>
+
+                            <Box>
+                                {faqs.map((faq, index) => (
+                                    <Accordion
+                                        key={index}
+                                        disableGutters
+                                        elevation={0}
+                                        sx={{
+                                            mb: 2,
+                                            border: "1px solid #E5DCC9",
+                                            borderRadius: "12px !important",
+                                            overflow: "hidden",
+                                            backgroundColor: "#FAFAED",
+                                            "&:before": {
+                                                display: "none",
+                                            },
+                                            "&.Mui-expanded": {
+                                                margin: "0 0 16px 0",
+                                            },
+                                        }}
+                                    >
+                                        <AccordionSummary
+                                            expandIcon={
+                                                <ExpandMoreIcon sx={{ color: "#CB070C" }} />
+                                            }
+                                            sx={{
+                                                px: { xs: 2, md: 3 },
+                                                py: 1,
+                                                minHeight: 65,
+                                                "& .MuiAccordionSummary-content": {
+                                                    my: 1.5,
+                                                },
+                                            }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    fontWeight: 700,
+                                                    color: "#0D0D0B",
+                                                    fontSize: {
+                                                        xs: "0.95rem",
+                                                        md: "1.05rem",
+                                                    },
+                                                }}
+                                            >
+                                                {faq.question}
+                                            </Typography>
+                                        </AccordionSummary>
+
+                                        <AccordionDetails
+                                            sx={{
+                                                px: { xs: 2, md: 3 },
+                                                pb: 3,
+                                            }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    color: "#555",
+                                                    lineHeight: 1.8,
+                                                    textAlign: "justify",
+                                                }}
+                                            >
+                                                {faq.answer}
+                                            </Typography>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                ))}
                             </Box>
                         </Box>
                     </Box>
