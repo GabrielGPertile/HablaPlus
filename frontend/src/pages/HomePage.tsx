@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Link, Divider } from "@mui/material";
 
 import { Accordion, AccordionSummary, AccordionDetails, } from "@mui/material";
 
@@ -64,6 +64,16 @@ function HomePage() {
             answer:
                 "Você pode conhecer as opções disponíveis na seção de cursos e escolher aquela que melhor corresponde ao seu nível de conhecimento e aos seus objetivos.",
         },
+    ];
+
+    const currentYear = new Date().getFullYear();
+
+    const navigation = [
+        { label: "Início", href: "#inicio" },
+        { label: "Cursos", href: "#cursos" },
+        { label: "Quem somos", href: "#quem-somos" },
+        { label: "Perguntas frequentes", href: "#faq" },
+        { label: "Contato", href: "#contato" },
     ];
 
     return (
@@ -1042,6 +1052,151 @@ function HomePage() {
                             </Box>
                         </Box>
 
+                        <Box
+                            component="footer"
+                            sx={{
+                                backgroundColor: "#0D0D0B",
+                                color: "#FAFAED",
+                                px: { xs: 3, md: 8 },
+                                pt: 6,
+                                pb: 3,
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    maxWidth: 1400,
+                                    mx: "auto",
+                                    display: "grid",
+                                    gridTemplateColumns: {
+                                        xs: "1fr",
+                                        sm: "repeat(2, 1fr)",
+                                        md: "2fr 1fr 1fr",
+                                    },
+                                    gap: 5,
+                                    mb: 5,
+                                }}
+                            >
+                                {/* Identidade da plataforma */}
+                                <Box>
+                                    <Box
+                                        component="img"
+                                        src="/logo.jpeg"
+                                        alt="Logo Espanhol Genial"
+                                        sx={{
+                                            width: 110,
+                                            height: 110,
+                                            objectFit: "contain",
+                                            mb: 2,
+                                            borderRadius: 2,
+                                        }}
+                                    />
+
+                                    <Typography
+                                        variant="h5"
+                                        sx={{
+                                            fontWeight: 700,
+                                            color: "#F9BD0B",
+                                            mb: 2,
+                                        }}
+                                    >
+                                        Espanhol Genial
+                                    </Typography>
+
+                                    <Typography
+                                        sx={{
+                                            color: "#D6D3C8",
+                                            lineHeight: 1.8,
+                                            maxWidth: 350,
+                                        }}
+                                    >
+                                        Aprenda espanhol, descubra novas culturas
+                                        e prepare-se para novas experiências.
+                                    </Typography>
+                                </Box>
+
+                                {/* Navegação */}
+                                <Box>
+                                    <Typography
+                                        variant="h6"
+                                        sx={{
+                                            fontWeight: 700,
+                                            mb: 3,
+                                            color: "#F9BD0B",
+                                        }}
+                                    >
+                                        Navegação
+                                    </Typography>
+
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            gap: 1.5,
+                                        }}
+                                    >
+                                        {navigation.map((item) => (
+                                            <Link
+                                                key={item.href}
+                                                href={item.href}
+                                                underline="none"
+                                                sx={{
+                                                    color: "#FAFAED",
+                                                    width: "fit-content",
+                                                    transition: "0.2s",
+                                                    "&:hover": {
+                                                        color: "#F9BD0B",
+                                                    },
+                                                }}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        ))}
+                                    </Box>
+                                </Box>
+
+                                {/* Informações */}
+                                <Box>
+                                    <Typography
+                                        variant="h6"
+                                        sx={{
+                                            fontWeight: 700,
+                                            mb: 3,
+                                            color: "#F9BD0B",
+                                        }}
+                                    >
+                                        Informações
+                                    </Typography>
+
+                                    <Typography
+                                        sx={{
+                                            color: "#D6D3C8",
+                                            lineHeight: 1.8,
+                                        }}
+                                    >
+                                        Um novo idioma abre portas para
+                                        um mundo de possibilidades.
+                                    </Typography>
+                                </Box>
+                            </Box>
+
+                            <Divider
+                                sx={{
+                                    borderColor: "rgba(250,250,237,0.2)",
+                                    mb: 3,
+                                }}
+                            />
+
+                            {/* Direitos autorais */}
+                            <Typography
+                                sx={{
+                                    textAlign: "center",
+                                    color: "#B8B5AA",
+                                    fontSize: "0.85rem",
+                                }}
+                            >
+                                © {currentYear} Espanhol Genial. Todos os direitos reservados.
+                            </Typography>
+                        </Box>
                     </Box>
                 </Box>
             </Box>
